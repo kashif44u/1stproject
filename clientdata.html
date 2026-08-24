@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Registration | SSNoor Store</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+
+        .form-container {
+            width: 500px;
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-group {
+            flex: 1;
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 7px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #2563eb;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .gender {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .gender label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .gender input {
+            width: auto;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .terms input {
+            width: auto;
+        }
+
+        .terms a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 7px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .register-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .login-link a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 550px) {
+            .form-container {
+                width: 100%;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="form-container">
+
+        <div class="logo">
+            SSNoor Store
+        </div>
+
+        <h1 class="title">
+            Create Your Account
+        </h1>
+
+        <p class="subtitle">
+            Please provide your information to register
+        </p>
+
+        <form action="#" method="post">
+
+            <!-- First Name and Last Name -->
+            <div class="form-row">
+
+                <div class="form-group">
+                    <label for="firstName">
+                        First Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        placeholder="Enter first name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">
+                        Last Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Enter last name"
+                        required>
+                </div>
+
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="03XX-XXXXXXX"
+                    required>
+
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+
+                <label for="dob">
+                    Date of Birth
+                </label>
+
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob">
+
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+
+                <label>
+                    Gender
+                </label>
+
+                <div class="gender">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="male">
+                        Male
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="female">
+                        Female
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="other">
+                        Other
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+
+                <label for="address">
+                    Address
+                </label>
+
+                <textarea
+                    id="address"
+                    name="address"
+                    placeholder="Enter your complete address"
+                    required></textarea>
+
+            </div>
+
+            <!-- City -->
+            <div class="form-group">
+
+                <label for="city">
+                    City
+                </label>
+
+                <select
+                    id="city"
+                    name="city"
+                    required>
+
+                    <option value="">
+                        Select your city
+                    </option>
+
+                    <option value="karachi">
+                        Karachi
+                    </option>
+
+                    <option value="lahore">
+                        Lahore
+                    </option>
+
+                    <option value="islamabad">
+                        Islamabad
+                    </option>
+
+                    <option value="rawalpindi">
+                        Rawalpindi
+                    </option>
+
+                    <option value="peshawar">
+                        Peshawar
+                    </option>
+
+                    <option value="quetta">
+                        Quetta
+                    </option>
+
+                    <option value="multan">
+                        Multan
+                    </option>
+
+                    <option value="faisalabad">
+                        Faisalabad
+                    </option>
+
+                    <option value="hyderabad">
+                        Hyderabad
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Create a password"
+                    minlength="8"
+                    required>
+
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+
+                <label for="confirmPassword">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Confirm your password"
+                    minlength="8"
+                    required>
+
+            </div>
+
+            <!-- Terms -->
+            <div class="terms">
+
+                <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    required>
+
+                <label for="terms">
+                    I agree to the
+                    <a href="#">
+                        Terms & Conditions
+                    </a>
+                </label>
+
+            </div>
+
+            <!-- Submit -->
+            <button
+                type="submit"
+                class="register-btn">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+        <!-- Login -->
+        <div class="login-link">
+
+            Already have an account?
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
